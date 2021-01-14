@@ -46,7 +46,7 @@ export default function Footer() {
     </Styled.Footer>
   );
 }
-console.log("test");
+
 const Styled = {
   Footer: styled.div`
     .footer__title {

@@ -38,7 +38,7 @@ const CallToAction = () => {
 export default CallToAction;
 const Styled = {
   CallToAction: styled.div`
-    padding-top: 40px;
+    padding-top: 41px;
   `,
 };
 const styles = {

@@ -112,7 +112,7 @@ export default FAQ;
 
 const Styled = {
   FAQ: styled.div`
-    padding-top: 60px;
+    padding-top: 61px;
   `,
 };
 const styles = {
