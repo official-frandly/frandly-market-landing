@@ -11,10 +11,8 @@ const CallToAction = () => {
         <Container>
           <Flex sx={styles.flex}>
             <Box sx={styles.content}>
-              <Text as="span">Behind the design</Text>
-              <Heading as="h3">
-                Code that we used to built the website with integrating apps
-              </Heading>
+              <Text as="span">마켓 입점</Text>
+              <Heading as="h3">프랜들리 마켓 입점을 망설이고 계시나요?</Heading>
               <Text as="p">
                 Get your tests delivered at let home collect sample from the
                 victory of the managements that supplies best design system

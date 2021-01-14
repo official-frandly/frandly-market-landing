@@ -36,7 +36,7 @@ const accordionData = [
   },
   {
     isExpanded: false,
-    title: "입점할때 주의 사항이 있나요?",
+    title: "입점할 때 주의 사항이 있나요?",
     contents: (
       <div>
         For our recent trip to S.A. I booked several accommodation thru SA
@@ -50,7 +50,7 @@ const accordionData = [
   },
   {
     isExpanded: false,
-    title: "프랜들리박스를 구매하고싶은데 어떻게 해야하나요?",
+    title: "프랜들리 박스를 구매하고싶은데 어떻게 해야하나요?",
     contents: (
       <div>
         For our recent trip to S.A. I booked several accommodation thru SA
@@ -90,7 +90,7 @@ const FAQ = () => {
             </Box>
             <Box sx={styles.content}>
               <Heading as="h3">
-                추가적인 질문이 더 남았나요? 문의하기 버튼을 눌러 질문을
+                추가적인 질문이 더 남았나요? <br /> 문의하기 버튼을 눌러 질문을
                 남겨주세요.
               </Heading>
               <Text as="p">

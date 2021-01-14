@@ -43,7 +43,7 @@ const Featured = () => {
     <Box as="section" sx={styles.featured} id="market">
       <Container sx={styles.container}>
         <BlockTitle
-          title="대시보드 기반을 통한 편리한 마켓"
+          title="대시보드 기반을 통한 편리한 마켓관리"
           text="Introducing all screen details"
         />
         <Box sx={styles.tabButtonTopWrapper}>
