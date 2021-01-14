@@ -59,10 +59,7 @@ const News = () => {
   return (
     <Box as="section" id="news" sx={styles.blogs}>
       <Container>
-        <BlockTitle
-          title="Recent news post updated"
-          text="Updete newsfeed news"
-        />
+        <BlockTitle title="프랜들리 최신 뉴스" text="Updete newsfeed news" />
         <Box as={Masonry} options={masonryOptions} sx={styles.blogWrapper}>
           {BLOG_DATA.map(
             ({ image, title, description, path, linkLabel }, index) => (
