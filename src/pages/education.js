@@ -1,7 +1,8 @@
 import React from "react";
+import { EducationCotnainer } from "containers/education";
 
-function education(props) {
-  return <div>education</div>;
+function Education(props) {
+  return <EducationCotnainer />;
 }
 
-export default education;
+export default Education;
