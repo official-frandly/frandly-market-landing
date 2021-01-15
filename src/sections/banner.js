@@ -59,7 +59,6 @@ const Banner = () => {
             alt="banner icon"
             src={bannerIcon7}
           />
-
           <Image sx={styles.logo} src={logoImage} alt="logo image" />
           <Heading as="h2">프랜들리 마켓과 함께</Heading>
           <p className="subtitle">

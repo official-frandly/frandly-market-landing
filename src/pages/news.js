@@ -1,7 +1,19 @@
 import React from "react";
+import Layout from "components/base/template/layout";
+import styled from "styled-components";
+import { PageHeader } from "components/common/header";
 
-function news(props) {
-  return <div>news</div>;
+function News(props) {
+  return (
+    <Styled.News>
+      <PageHeader />
+      news
+    </Styled.News>
+  );
 }
 
-export default news;
+const Styled = {
+  News: styled.div``,
+};
+
+export default News;

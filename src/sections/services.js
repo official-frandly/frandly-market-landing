@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Grid } from "theme-ui";
-import BlockTitle from "components/block-title";
-import ServiceCard from "components/cards/service-card";
+import BlockTitle from "components/common/block-title/block-title";
+import ServiceCard from "components/common/cards/service-card";
 import serviceImage1 from "assets/service-1.png";
 import serviceImage2 from "assets/service-2.png";
 import serviceImage3 from "assets/service-3.png";

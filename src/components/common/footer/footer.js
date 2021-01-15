@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import React from "react";
 import { jsx, Box, Text, Container, Image } from "theme-ui";
-import { Link } from "components/link";
-import Logo from "components/logo";
+import { Link } from "components/base/link";
+import Logo from "components/common/logo/logo";
 import logoLight from "assets/logo-light.svg";
 import styled from "styled-components";
 import logoImage from "assets/logo_not_bg.png";

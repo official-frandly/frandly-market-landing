@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Box, Container, Button } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import BlockTitle from "components/block-title";
-import Image from "components/image";
+import BlockTitle from "components/common/block-title/block-title";
+import Image from "components/base/image";
 import { AiFillDollarCircle, AiFillPieChart } from "react-icons/ai";
 import { FaBriefcase, FaCog } from "react-icons/fa";
 import tabImage1 from "assets/tab-image-1.png";
