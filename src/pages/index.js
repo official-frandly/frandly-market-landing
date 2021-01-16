@@ -4,19 +4,20 @@ import { StickyProvider } from "contexts/app/app.provider";
 import theme from "theme";
 import SEO from "components/seo";
 import Layout from "components/layout";
-import Banner from "sections/banner";
-import Services from "sections/services";
-import Jackpot from "sections/jackpot";
-import CallToAction from "sections/call-to-action";
-import Partnership from "sections/partnership";
-import Featured from "sections/featured";
-import Pricing from "sections/pricing";
-import Testimonials from "sections/testimonials";
-import Blogs from "sections/blogs";
-import News from "sections/news";
-import FAQ from "sections/faq";
-import Subscribe from "sections/subscribe";
-import Contact from "sections/contact";
+import Banner from "components/sections/banner";
+import Services from "components/sections/services";
+import Jackpot from "components/sections/jackpot";
+import CallToAction from "components/sections/call-to-action";
+import Partnership from "components/sections/partnership";
+import Featured from "components/sections/featured";
+import Pricing from "components/sections/pricing";
+import Testimonials from "components/sections/testimonials";
+import Blogs from "components/sections/blogs";
+import News from "components/sections/news";
+import FAQ from "components/sections/faq";
+import Subscribe from "components/sections/subscribe";
+import Contact from "components/sections/contact";
+import Education from "components/sections/education";
 
 export default function IndexPage() {
   return (
@@ -32,7 +33,8 @@ export default function IndexPage() {
           {/* <Pricing /> */}
           <CallToAction />
           <Testimonials />
-          <News />
+          {/* <News /> */}
+          <Education />
           <FAQ />
           <Contact />
         </Layout>

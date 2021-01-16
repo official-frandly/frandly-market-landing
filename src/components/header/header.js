@@ -51,22 +51,25 @@ export default function Header({ className }) {
               </ScrollLink>
             ))}
             {/* <Link path="/" ml={2} label="서비스" sx={styles.nav.navLink} /> */}
-            <Link
+            {/* <Link
               path="/education"
               ml={2}
               label="교육자료"
               sx={styles.nav.navLink}
-            />
-            <Link path="/news" ml={2} label="뉴스" sx={styles.nav.navLink} />
+            /> */}
+            {/* <Link path="/news" ml={2} label="뉴스" sx={styles.nav.navLink} /> */}
           </Flex>
           <span className="qa__number">입점 문의 02-651-5513</span>
-          <Link
+          {/* <Link
             path="/"
             ml={2}
             label="입점 신청하기"
             sx={styles.headerBtn}
             variant="buttons.primary"
-          />
+          /> */}
+          <a href="https://www.naver.com" target="_blank" sx={styles.headerBtn}>
+            입점 신청하기
+          </a>
           <MobileDrawer />
         </Container>
         {/* </header> */}
@@ -80,7 +83,7 @@ const Styled = {
       position: relative;
       font-size: 30px;
       font-weight: bold;
-      top: -7px;
+      top: 2px;
     }
     .qa__number {
       display: inline-block;
@@ -91,8 +94,8 @@ const Styled = {
     .logo {
       position: relative;
       width: 40px;
-      top: 10px;
-      margin-right: 5px;
+      top: -3px;
+      margin-right: 7px;
     }
   `,
 };
