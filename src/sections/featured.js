@@ -43,7 +43,7 @@ const Featured = () => {
     <Box as="section" sx={styles.featured} id="market">
       <Container sx={styles.container}>
         <BlockTitle
-          title="What the features of product"
+          title="대시보드 기반을 통한 편리한 마켓관리"
           text="Introducing all screen details"
         />
         <Box sx={styles.tabButtonTopWrapper}>
@@ -53,28 +53,28 @@ const Featured = () => {
               className={`${tab.active === "budget" ? "active" : ""}`}
             >
               <AiFillDollarCircle />
-              Budget Overview
+              수익 개요
             </Button>
             <Button
               onClick={() => handleTab("adjust")}
               className={`${tab.active === "adjust" ? "active" : ""}`}
             >
               <FaCog />
-              Create & adjust
+              상품 판매
             </Button>
             <Button
               onClick={() => handleTab("report")}
               className={`${tab.active === "report" ? "active" : ""}`}
             >
               <AiFillPieChart />
-              View Reports
+              상점 모니터링
             </Button>
             <Button
               onClick={() => handleTab("create")}
               className={`${tab.active === "create" ? "active" : ""}`}
             >
               <FaBriefcase />
-              Create & adjust
+              광고 제휴
             </Button>
           </Box>
         </Box>

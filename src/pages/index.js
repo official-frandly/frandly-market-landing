@@ -8,12 +8,12 @@ import Banner from "sections/banner";
 import Services from "sections/services";
 import Jackpot from "sections/jackpot";
 import CallToAction from "sections/call-to-action";
+import Partnership from "sections/partnership";
 import Featured from "sections/featured";
 import Pricing from "sections/pricing";
 import Testimonials from "sections/testimonials";
 import Blogs from "sections/blogs";
 import News from "sections/news";
-
 import FAQ from "sections/faq";
 import Subscribe from "sections/subscribe";
 import Contact from "sections/contact";
@@ -27,7 +27,7 @@ export default function IndexPage() {
           <Banner />
           <Services />
           <Jackpot />
-          <CallToAction />
+          <Partnership />
           <Featured />
           {/* <Pricing /> */}
           <CallToAction />
