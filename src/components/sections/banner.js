@@ -11,6 +11,7 @@ import bannerIcon5 from "assets/banner-icon-1-5.svg";
 import bannerIcon6 from "assets/banner-icon-1-6.svg";
 import bannerIcon7 from "assets/dot-pattern.svg";
 import styled from "styled-components";
+import { setting } from "lib/config";
 
 const Banner = () => {
   return (
@@ -61,10 +62,10 @@ const Banner = () => {
           />
 
           <Image sx={styles.logo} src={logoImage} alt="logo image" />
-          <Heading as="h2">프랜들리 마켓과 함께</Heading>
+          <Heading as="h2">{setting.brandName_ko} 마켓과 함께</Heading>
           <p className="subtitle">
-            똑똑한 프랜들리 마켓을 통해, <br /> 고객 수를 늘리고 프랜들리 마켓의
-            남다른 혜택을 <br /> 경험해보세요!
+            똑똑한 {setting.brandName_ko} 마켓을 통해, <br /> 고객 수를 늘리고{" "}
+            {setting.brandName_ko} 마켓의 남다른 혜택을 <br /> 경험해보세요!
           </p>
           <Image src={bannerImage} sx={styles.bannerImage} alt="banner moc" />
         </Container>

@@ -7,18 +7,18 @@ export default [
   //   path: "services",
   //   label: "서비스",
   // },
-  // {
-  //   path: "education",
-  //   label: "교육자료",
-  // },
+  {
+    path: "education",
+    label: "교육자료",
+  },
   // {
   //   path: "pricing",
   //   label: "Pricing",
   // },
-  {
-    path: "market",
-    label: "마켓",
-  },
+  // {
+  //   path: "market",
+  //   label: "마켓",
+  // },
   // {
   //   path: "testimonials",
   //   label: "Testimonials",

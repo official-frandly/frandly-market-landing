@@ -3,7 +3,7 @@ import { Box, Container, Flex, Text, Heading, Image } from "theme-ui";
 import { Link } from "components/link";
 import styled from "styled-components";
 import callImage from "assets/call-image.png";
-
+import { setting } from "lib/config";
 const Partnership = () => {
   return (
     <Styled.Partnership>
@@ -12,16 +12,22 @@ const Partnership = () => {
           <Flex sx={styles.flex}>
             <Box sx={styles.content}>
               <Text as="span">마켓 제휴</Text>
-              <Heading as="h3">프렌더 제휴, 신청하세요.</Heading>
+              <Heading as="h3">
+                {setting.partnerNickname} 제휴, 신청하세요.
+              </Heading>
               <Text as="p">
-                Get your tests delivered at let home collect sample from the
-                victory of the managements that supplies best design system
-                guidelines ever. Get your tests delivered at let home collect
-                sample.
+                본사에서 직접 사진을 찍어주고, 포토샵과 상품 업로드를 진행
+                해드립니다. Get your tests delivered at let home collect sample
+                from the victory of the
               </Text>
-              <Link path="#" sx={styles.button}>
-                Explore More
-              </Link>
+
+              <a
+                href={setting.importPointAddress}
+                target="_blank"
+                className="partnership__btn"
+              >
+                제휴 신청하기
+              </a>
             </Box>
             <Box sx={styles.images}>
               <Image src={callImage} alt="call image" />
@@ -37,6 +43,22 @@ export default Partnership;
 const Styled = {
   Partnership: styled.div`
     padding-top: 41px;
+
+    .partnership__btn {
+      display: inline-block;
+      vertical-align: middle;
+      background: #02073e;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 6.5px 19px;
+      letter-spacing: -0.16px;
+      transition: all 500ms ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   `,
 };
 const styles = {

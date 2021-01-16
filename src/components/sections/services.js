@@ -8,6 +8,7 @@ import serviceImage3 from "assets/service-3.png";
 import serviceImage4 from "assets/service-4.png";
 import serviceImage5 from "assets/service-5.png";
 import serviceImage6 from "assets/service-6.png";
+import { setting } from "lib/config";
 // Learn more 버튼 클릭시 모달 뜨면서 next버튼 눌러서 이동하는 설명서 뜨게하기
 const SERVICES_DATA = [
   {
@@ -58,8 +59,8 @@ const Services = () => {
     <Box as="section" id="services" sx={styles.services}>
       <Container>
         <BlockTitle
-          title="프랜들리 마켓의 기능"
-          text="프랜들리 마켓의 편안한 기능을 바로 만나보세요"
+          title={`${setting.brandName_ko} 마켓의 기능`}
+          text={`${setting.brandName_ko} 마켓의 편안한 기능을 바로 만나보세요`}
         />
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map(({ image, text, heading, path }, index) => (
