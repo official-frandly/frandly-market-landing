@@ -10,7 +10,7 @@ import testimonialsImage3 from "assets/testimonial-1-3.png";
 import testimonialsImage4 from "assets/testimonial-1-4.png";
 import testimonialsImage5 from "assets/testimonial-1-5.png";
 import testimonialsImage6 from "assets/testimonial-1-6.png";
-
+import { setting } from "lib/config";
 SwiperCore.use([Autoplay]);
 
 const TESTIMONIALS_DATA = [
@@ -18,9 +18,9 @@ const TESTIMONIALS_DATA = [
     {
       image: testimonialsImage1,
       text:
-        "I would like to take this oppertunity to thank SA Places for the great service rendered to us and in particular Estelle. You got me the best place ever in just a few moments after I spoke to you.",
-      username: "@hello.mimmie",
-      name: "Minnie Horn",
+        "마켓 프랜들리를 써서 판매중인데, 이전보다 수익도 늘고 환경을 알릴 수 있어서 정말 좋아요! 감사합니다!.",
+      username: "@highvafe",
+      name: "이준영",
     },
     {
       image: testimonialsImage2,
@@ -145,7 +145,10 @@ const Testimonials = () => {
   };
   return (
     <Box as="section" id="testimonials" sx={styles.testimonials}>
-      <BlockTitle title="마켓 프랜더의 반응" text="Customer testimonial" />
+      <BlockTitle
+        title={`마켓 ${setting.partnerNickname}의 반응`}
+        text="Customer testimonial"
+      />
       <Swiper {...testimonialCarousel}>
         {TESTIMONIALS_DATA.map((item, index) => (
           <SwiperSlide key={index}>

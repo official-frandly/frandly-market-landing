@@ -10,6 +10,7 @@ import blogImage3 from "assets/blog-1-3.png";
 import blogImage4 from "assets/blog-1-4.png";
 import { EducationModal } from "components/modal";
 import styled from "styled-components";
+import { setting } from "lib/config";
 
 const BLOG_DATA = [
   {
@@ -63,7 +64,10 @@ const Education = () => {
     <Styled.Education>
       <Box as="section" id="education" sx={styles.blogs}>
         <Container>
-          <BlockTitle title="프랜들리 교육 자료" text="Updete newsfeed news" />
+          <BlockTitle
+            title={`${setting.brandName_ko} 교육 자료`}
+            text="Updete newsfeed news"
+          />
           <div className="education__modal_box">
             <EducationModal />
           </div>

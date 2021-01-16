@@ -4,6 +4,8 @@ import { Link } from "components/link";
 import BlockTitle from "components/block-title";
 import Accordion from "components/accordion/accordion";
 import styled from "styled-components";
+import { QuestionModal } from "components/modal";
+import { data } from "lib/config";
 const accordionData = [
   {
     isExpanded: false,
@@ -93,13 +95,14 @@ const FAQ = () => {
                 추가적인 질문이 더 남았나요? <br /> 문의하기 버튼을 눌러 질문을
                 남겨주세요.
               </Heading>
-              <Text as="p">
+              <Text as="p" className="faq__subtitle">
                 If your question is not list here, please feel free to make a
-                manual support. 간단한 모달창띄우기
+                manual support.
               </Text>
-              <Link sx={styles.askButton} path="#">
+              {/* <Link sx={styles.askButton} path="#">
                 문의하기
-              </Link>
+              </Link> */}
+              <QuestionModal />
             </Box>
           </Flex>
         </Container>
@@ -113,6 +116,9 @@ export default FAQ;
 const Styled = {
   FAQ: styled.div`
     padding-top: 61px;
+    .faq__subtitle {
+      margin-bottom: 30px;
+    }
   `,
 };
 const styles = {

@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import styled, { createGlobalStyle } from "styled-components";
+import { setting } from "lib/config";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -31,9 +33,9 @@ export default function EducationModal() {
   };
 
   return (
-    <div>
-      <button type="button" onClick={handleOpen}>
-        Learn More
+    <Styled.QuestionModal>
+      <button type="button" onClick={handleOpen} className="qna__btn">
+        문의하기
       </button>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -49,13 +51,47 @@ export default function EducationModal() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Qustion</h2>
-            <p id="transition-modal-description">
-              react-transition-group animates me.
-            </p>
+            {/* <h2 id="transition-modal-title">문의하기</h2> */}
+            <div id="transition-modal-description">
+              <div>
+                추가적인 문의는{" "}
+                <span className="question__email">{setting.questionEmail}</span>{" "}
+                으로 문의주시면 감사하겠습니다.
+              </div>
+            </div>
           </div>
         </Fade>
       </Modal>
-    </div>
+      <QuestionModalStyle />
+    </Styled.QuestionModal>
   );
 }
+
+const QuestionModalStyle = createGlobalStyle`
+  .question__email{
+    display:inline-block;
+    background:#f5f5f5;
+    padding: 0 10px;
+  }
+`;
+
+const Styled = {
+  QuestionModal: styled.div`
+    .qna__btn {
+      display: inline-block;
+      vertical-align: middle;
+      background: #02073e;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 10px 21px;
+      letter-spacing: -0.16px;
+      transition: all 500ms ease;
+      border: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  `,
+};

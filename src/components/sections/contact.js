@@ -1,15 +1,16 @@
 import React from "react";
 import { Button, Input, Box, Container, Heading, Text } from "theme-ui";
 import styled from "styled-components";
-
+import { setting } from "lib/config";
 const Contact = () => {
   return (
     <Styled.Contact>
       <Box as="section" sx={styles.subscribe}>
         <Container>
-          <Heading as="h3">프랜들리를 구독하세요!</Heading>
+          <Heading as="h3">{setting.brandName_ko}를 구독하세요!</Heading>
           <Text as="p">
-            구독하기를 통해 프랜들리의 최신 이벤트와 정보를 받아볼 수 있습니다.
+            구독하기를 통해 {setting.brandName_ko}의 최신 이벤트와 정보를 받아볼
+            수 있습니다.
           </Text>
 
           {/* <Box as="form" sx={styles.form}>

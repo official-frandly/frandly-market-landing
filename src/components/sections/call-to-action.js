@@ -3,7 +3,7 @@ import { Box, Container, Flex, Text, Heading, Image } from "theme-ui";
 import { Link } from "components/link";
 import styled from "styled-components";
 import callImage from "assets/call-image.png";
-
+import { setting } from "lib/config";
 const CallToAction = () => {
   return (
     <Styled.CallToAction>
@@ -12,16 +12,22 @@ const CallToAction = () => {
           <Flex sx={styles.flex}>
             <Box sx={styles.content}>
               <Text as="span">마켓 입점</Text>
-              <Heading as="h3">프랜들리 마켓 입점을 망설이고 계시나요?</Heading>
+              <Heading as="h3">
+                {setting.brandName_ko} 마켓 입점을 망설이고 계시나요?
+              </Heading>
               <Text as="p">
-                Get your tests delivered at let home collect sample from the
-                victory of the managements that supplies best design system
-                guidelines ever. Get your tests delivered at let home collect
-                sample.
+                Get your tests that supplies best design system guidelines ever.
+                Get your tests delivered at let home collect sample. 3개월 무료
+                체험중이니 지금 신청해보세요.
               </Text>
-              <Link path="#" sx={styles.button}>
-                Explore More
-              </Link>
+
+              <a
+                href={setting.importPointAddress}
+                className="partnership__btn"
+                target="_blank"
+              >
+                입점 신청하기
+              </a>
             </Box>
             <Box sx={styles.images}>
               <Image src={callImage} alt="call image" />
@@ -37,6 +43,22 @@ export default CallToAction;
 const Styled = {
   CallToAction: styled.div`
     padding-top: 41px;
+
+    .partnership__btn {
+      display: inline-block;
+      vertical-align: middle;
+      background: #02073e;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 6.5px 19px;
+      letter-spacing: -0.16px;
+      transition: all 500ms ease;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   `,
 };
 const styles = {

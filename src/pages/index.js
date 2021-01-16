@@ -18,13 +18,13 @@ import FAQ from "components/sections/faq";
 import Subscribe from "components/sections/subscribe";
 import Contact from "components/sections/contact";
 import Education from "components/sections/education";
-
+import { setting } from "lib/config";
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <SEO title="프랜들리 마켓" />
+          <SEO title={setting.brandName_ko + " 마켓"} />
           <Banner />
           <Services />
           <Jackpot />

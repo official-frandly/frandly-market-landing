@@ -6,6 +6,8 @@ import Logo from "components/logo";
 import logoLight from "assets/logo-light.svg";
 import styled from "styled-components";
 import logoImage from "assets/logo_not_bg.png";
+import { setting } from "lib/config";
+import { capitalize } from "lib/utils";
 
 export default function Footer() {
   return (
@@ -21,7 +23,9 @@ export default function Footer() {
           >
             {/* <Logo image={logoLight} /> */}
             <Image src={logoImage} className="footer__logo_image" />
-            <h3 className="footer__title">Frandly</h3>
+            <h3 className="footer__title">
+              {capitalize(setting.brandName_en)}
+            </h3>
             <Text
               as="p"
               sx={{
@@ -31,7 +35,8 @@ export default function Footer() {
                 mt: ["10px", null, null, null, null, "0"],
               }}
             >
-              Copyright by {new Date().getFullYear()} Frandly, Inc
+              Copyright by {new Date().getFullYear()}{" "}
+              {capitalize(setting.brandName_en)}, Inc
             </Text>
           </Box>
           <Box sx={styles.linksWrap}>

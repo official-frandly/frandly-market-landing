@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { EducationCard } from "components/cards";
 
 const useStyles = makeStyles((theme) => ({
@@ -24,17 +24,105 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const educationItems = [
-  { id: 1 },
-  { id: 12 },
-  { id: 13 },
-  { id: 14 },
-  { id: 15 },
-  { id: 16 },
-  { id: 17 },
-  { id: 18 },
-  { id: 19 },
-  { id: 10 },
-  { id: 21 },
+  {
+    id: 1,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 12,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 13,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 14,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 15,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 16,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 17,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 18,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 19,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 10,
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
+  {
+    id: 21,
+    href:
+      "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?category=2&depth3_id=anls5&key1=51501&key2=1&bldid=bbs10031",
+    image: "https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05",
+    title: "프랜들리 입점 프로세스",
+    subtitle:
+      "프랜들리 입점 신청은 1분이면 끝입니다. 쉽고 간단한 프랜들리 입점 방법을 확인해보세요! 입점 프로세스 프랜들리 입점을... ",
+  },
 ];
 export default function EducationModal() {
   const classes = useStyles();
@@ -49,7 +137,7 @@ export default function EducationModal() {
   };
 
   return (
-    <Styled.EducationModal>
+    <Styled.EducationModal className="education__modal">
       <button
         type="button"
         onClick={handleOpen}
@@ -71,30 +159,71 @@ export default function EducationModal() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title">Education</h2>
-            <p id="transition-modal-description">
-              <div className="education__card_box_flex">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-              </div>
+            <h2 id="transition-modal-title" className="education__modal_title">
+              교육 자료
+            </h2>
+            <div id="transition-modal-description">
               <div className="education__card_box">
                 {educationItems.map((item) => {
                   return (
-                    <EducationCard className="education__card" key={item.id} />
+                    <div className="education__card_col" key={item.id}>
+                      <a href={item.href} target="_blank">
+                        <EducationCard
+                          className="education__card"
+                          image={item.image}
+                          title={item.title}
+                          subtitle={item.subtitle}
+                        />
+                      </a>
+                    </div>
                   );
                 })}
               </div>
-            </p>
+            </div>
           </div>
         </Fade>
       </Modal>
+      <ModalStyle />
     </Styled.EducationModal>
   );
 }
 
+const ModalStyle = createGlobalStyle`
+    .education__modal_title{
+      font-size:25px;
+      font-weight:bold;
+      border-bottom:1px solid #ececec;
+      margin-bottom:20px;
+    }
+    .education__card_box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width:1400px;
+      margin:auto;
+      &:after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+    }
+    .education__card_col{
+      
+      flex-basis: 33% ;
+      padding:10px;
+      max-width:360px;
+    }
+    .education__card{
+      
+      
+      
+    }
+`;
 const Styled = {
   EducationModal: styled.div`
+    text-align: right;
+
     .educationModal__btn {
       background: transparent;
       color: #4f96ff;
@@ -103,32 +232,6 @@ const Styled = {
       &:hover {
         color: #2e7cf1;
       }
-    }
-    .education__card_box {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      &:after {
-        display: block;
-        clear: both;
-        content: "";
-      }
-    }
-    .education__card_box_flex {
-      display: flex;
-      flex-direction: row;
-      div {
-        background-color: #f1f1f1;
-        width: 100px;
-        margin: 10px;
-        text-align: center;
-        line-height: 75px;
-        font-size: 30px;
-      }
-    }
-    .education__card {
-      /* display:flex- */
     }
   `,
 };

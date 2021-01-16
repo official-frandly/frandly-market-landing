@@ -11,11 +11,11 @@ import styled from "styled-components";
 
 const useStyles = makeStyles({
   media: {
-    height: 140,
+    height: 240,
   },
 });
 
-export default function MediaCard() {
+export default function MediaCard(props) {
   const classes = useStyles();
 
   return (
@@ -24,27 +24,26 @@ export default function MediaCard() {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="https://t1.daumcdn.net/cfile/tistory/994BEF355CD0313D05"
+            image={props.image || ""}
             title="Contemplative Reptile"
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Lizard
+              {props.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              {props.subtitle}
             </Typography>
           </CardContent>
         </CardActionArea>
-        {/* <CardActions>
-          <Button size="small" color="primary">
+        <CardActions>
+          {/* <Button size="small" color="primary">
             Share
-          </Button>
+          </Button> */}
           <Button size="small" color="primary">
-            Learn More
+            더 보기
           </Button>
-        </CardActions> */}
+        </CardActions>
       </Card>
     </Styled.MediaCard>
   );
@@ -54,7 +53,8 @@ const Styled = {
   MediaCard: styled.div`
     .card__item {
       /* float: left; */
-      max-width: 360px;
+      /* max-width: 360px; */
+      width: 100%;
       margin-right: 10px;
       margin-bottom: 15px;
       /* &:last-child {

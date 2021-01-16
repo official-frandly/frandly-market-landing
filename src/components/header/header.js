@@ -9,6 +9,8 @@ import MobileDrawer from "./mobileDrawer";
 import menuItems from "./header.data";
 import logoDark from "assets/logo-dark.svg";
 import styled from "styled-components";
+import { setting } from "lib/config";
+import { capitalize } from "lib/utils";
 
 export default function Header({ className }) {
   return (
@@ -30,7 +32,7 @@ export default function Header({ className }) {
             <div>
               <span className="title__logo">
                 <Image className="logo" src={logoImage} alt="logo image" />
-                Frandly market
+                {capitalize(setting.brandName_en)} market
               </span>
               {/* <h2>Frandly</h2> */}
             </div>
@@ -59,7 +61,9 @@ export default function Header({ className }) {
             /> */}
             {/* <Link path="/news" ml={2} label="뉴스" sx={styles.nav.navLink} /> */}
           </Flex>
-          <span className="qa__number">입점 문의 02-651-5513</span>
+          <span className="qa__number">
+            입점 문의 {setting.importPointNumber}
+          </span>
           {/* <Link
             path="/"
             ml={2}
@@ -67,7 +71,11 @@ export default function Header({ className }) {
             sx={styles.headerBtn}
             variant="buttons.primary"
           /> */}
-          <a href="https://www.naver.com" target="_blank" sx={styles.headerBtn}>
+          <a
+            href={setting.importPointAddress}
+            target="_blank"
+            sx={styles.headerBtn}
+          >
             입점 신청하기
           </a>
           <MobileDrawer />
